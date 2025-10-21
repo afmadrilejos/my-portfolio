@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="logo-container">
-            <a href="#home"><img src="assets/logo_sky.png" alt="Logo" class="logo"></a>
+            <a href="#home"><img src="assets/logo_navy.png" alt="Logo" class="logo"></a>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery/two-dim.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,44 +34,88 @@
     <!-- Gallery Page-->
     <section id="gallery" class="section gallery">
         <h2>Gallery</h2>
-        <div class="gallery-category">
-            <h3>Illustrations</h3>
-        </div>
+    <!-- Gallery Nav -->
+    <div id="galleryNav" class="d-flex justify-content-left flex-wrap mb-4">
+      <div class="dropdown m-2">
+        <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          2D Art
+        </button>
+        <ul class="dropdown-menu text-center">
+          <li><a class="dropdown-item" href="gallery/2d/illustration.html">Illustration</a></li>
+          <li><a class="dropdown-item" href="gallery/2d/character.html">Character</a></li>
+          <li><a class="dropdown-item" href="gallery/2d/background.html">Background</a></li>
+          <li><a class="dropdown-item" href="gallery/2d/pixel-art.html">Pixel Art</a></li>
+        </ul>
+      </div>
+      <a href="#" class="btn btn-outline-dark m-2">3D Art</a>
+      <a href="#" class="btn btn-outline-dark m-2">Logo Design</a>
+      <a href="#" class="btn btn-outline-dark m-2">UI Design</a>
+    </div>
 
-        <div class="gallery-category">
-            <h3>2D Art</h3>
-        </div>
-
-        <div class="gallery-category">
-            <h3>3D Art</h3>
-        </div>
-
-        <div class="gallery-category">
-            <h3>UI Designs / Prototypes</h3>
-        </div>
-    </section>
+    <!-- Gallery Preview -->
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="assets/0002147.jpg" alt="Art 1"></div>
+      <div class="gallery-item"><img src="assets/0003118.jpg" alt="Art 2"></div>
+      <div class="gallery-item"><img src="assets/0003767.jpg" alt="Art 3"></div>
+      <div class="gallery-item"><img src="assets/senku.png" alt="Art 4"></div>
+    </div>
+  </section>
 
     <!-- About Page -->
     <section id="about" class="section about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Arabella Faye Madrilejos, a multidisciplinary artist with a passion for visual storytelling. I specialize in both traditional and digital mediums, ranging from intricate illustrations to functional UI design.</p>
-    </section>
+      <h2>About Me</h2>
+
+    <div class="row">
+      <!-- Software List -->
+      <div class="col-md-4">
+        <div class="info-box">
+          <h3>Software List</h3>
+          <ul>
+            <li>Krita</li>
+            <li>Pixel Software</li>
+            <li>Photoshop</li>
+            <li>3D Maya</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="col-md-4">
+        <div class="info-box">
+          <h3>Languages</h3>
+          <ul>
+            <li>English</li>
+            <li>Tagalog</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- About Me -->
+      <div class="col-md-4">
+        <div class="info-box">
+          <h3>About Me</h3>
+          <p>Hello! I'm <strong>El</strong>, a multidisciplinary artist with a passion for visual storytelling. I specialize in both traditional and digital mediums, ranging from intricate illustrations to functional UI design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- Services Page -->
     <section id="services" class="section services">
         <h2>Services</h2>
         <ul>
-            <li><strong>Commissioned Artworks:</strong> Pending</li>
-            <li><strong>UI/UX Design:</strong> Pending</li>
-            <li><strong>3D Assets:</strong> Pending</li>
+            <li><strong>Commissioned Artworks:</strong> Custom illustrations, portraits, and concept art.</li>
+            <li><strong>UI/UX Design:</strong> Clean, user-friendly interface design for web and mobile.</li>
+            <li><strong>3D Assets:</strong> Modeling and rendering for animation, games, and design.</li>
         </ul>
     </section>
 
     <!-- Contact Page -->
     <section id="contact" class="section contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:elmadrilejos@email.com">elmadrilejos@email.com</a></p>
+        <p>Email: <a href="mailto: elmadrilejos@email.com">elmadrilejos@email.com</a></p>
     </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
